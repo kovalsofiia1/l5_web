@@ -102,7 +102,8 @@ window.onload = function () {
 const updateAlignment = (blockToAlign) => {
     if (blockToAlign=== 'sBlock') {
         document.querySelector(".menu").style.marginLeft = '0';
-      document.querySelector(".left h2").style.marginLeft = '0';
+        document.querySelector(".left h2").style.marginLeft = '0';
+        document.querySelector(".left").style.textAlign = 'left';
     }
     else if (blockToAlign=== 'tBlock') {
         document.querySelector(".countSquare").style.marginLeft = '0';
@@ -121,7 +122,8 @@ if (allignBlock) {
 
 function handleAlignmentClick(event) {
     document.querySelector(".menu").style.marginLeft = 'auto';
-   document.querySelector(".left h2").style.marginLeft = 'auto';
+    document.querySelector(".left h2").style.marginLeft = 'auto';
+     document.querySelector(".left").style.textAlign = 'center';
     document.querySelector(".right").style.textAlign = 'center';
     document.querySelector(".countSquare").style.marginLeft = 'auto';
     document.querySelector(".reverseNumber").style.marginLeft = 'auto';
