@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/styles-grid.css" />
+    <title>Page-one-grid</title>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="page-title">It`s Ukraine!</h1>
+    </header>
+    <aside class="left">
+      <div class="content">
+        <h2>Places in Kyiv</h2>
+
+        <ul class="menu">
+          <li><a href="index.html">Maidan Nezalezhnosti</a></li>
+          <li><a href="#">Khreshchatyk</a></li>
+          <li><a href="#">St Andrew's Church</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main class="page-main">
+      <aside class="right">
+        <div class="content">
+          <p>
+            Maidan Nezalezhnosti (literally "Independence Square") is the
+            central square of Kyiv, the capital city of Ukraine. One of the
+            city's main squares, it is located on Khreshchatyk Street in the
+            Shevchenko Raion. The square has been known under many different
+            names, but often it is called by people simply Maidan ("square").
+            The square contains the iconic Independence Monument.
+          </p>
+        </div>
+      </aside>
+      <div class="top">
+        <img
+          src="./images/maidan.jpg"
+          alt="Maidan Nezalezhnosti"
+          class="picture"
+          usemap="#karta"
+        />
+      </div>
+      <map name="karta">
+        <area
+          shape="rect"
+          coords="0,0,577,278"
+          href="https://en.wikipedia.org/wiki/Maidan_Nezalezhnosti"
+          alt="Maidan Nezalezhnosti wikipedia"
+        />
+      </map>
+      <div class="middle">
+        <div class="content">
+          <form class="countSquare">
+            <h3 class="form-title">Find square of trapezium</h3>
+            <div class="form-input-container">
+              <label for="top-side">Top side: </label>
+              <input
+                type="number"
+                min="0.01"
+                max="1000"
+                step="0.01"
+                id="top-side"
+                name="topSide"
+                required
+              />
+            </div>
+            <div class="form-input-container">
+              <label for="bottom-side">Bottom side: </label>
+              <input
+                type="number"
+                min="0.01"
+                max="1000"
+                step="0.01"
+                id="bottom-side"
+                name="bottomSide"
+                required
+              />
+            </div>
+            <div class="form-input-container">
+              <label for="height">Height: </label>
+              <input
+                type="number"
+                min="0.01"
+                max="1000"
+                step="0.01"
+                id="height"
+                name="height"
+                required
+              />
+            </div>
+            <div class="result-container">
+              <p class="result-title">Result: <span class="result"></span></p>
+            </div>
+            <button type="submit" class="form-button">Calculate</button>
+          </form>
+
+          <form class="reverseNumber">
+            <h3 class="form-title">Reverse number</h3>
+            <div class="form-input-container">
+              <label for="numberToReverse">Number to reverse: </label>
+              <input
+                type="number"
+                min="1"
+                step="1"
+                id="numberToReverse"
+                name="numberToReverse"
+                required
+              />
+            </div>
+
+            <div class="result-container">
+              <p class="result-title">
+                Result: <span class="result-reverse"></span>
+              </p>
+            </div>
+            <button type="submit" class="form-button">Reverse</button>
+          </form>
+          <form class="allign-elements">
+            <h3 class="form-title">Choose which block to allign left:</h3>
+            <div class="form-input-container-radio">
+              <label>
+                <input type="radio" id="sBlock" name="allignBlock" /> 2 block
+              </label>
+            </div>
+            <div class="form-input-container-radio">
+              <label>
+                <input type="radio" id="tBlock" name="allignBlock" />
+                3 block
+              </label>
+            </div>
+            <div class="form-input-container-radio">
+              <label>
+                <input type="radio" id="fBlock" name="allignBlock" />
+                4 block
+              </label>
+            </div>
+          </form>
+
+          <div class="choose-block">
+            <h3 class="form-title">Choose block:</h3>
+            <a
+              href=""
+              class="choose-block-link"
+              id="page-header-block"
+              onfocus="handleLinkFocus(this)"
+              >1 block</a
+            >
+            <a
+              href=""
+              class="choose-block-link"
+              id="left-block"
+              onfocus="handleLinkFocus(this)"
+              >2 block</a
+            >
+            <a
+              href=""
+              class="choose-block-link"
+              id="middle-block"
+              onfocus="handleLinkFocus(this)"
+              >3 block</a
+            >
+            <a
+              href=""
+              class="choose-block-link"
+              id="right-block"
+              onfocus="handleLinkFocus(this)"
+              >4 block</a
+            >
+            <a
+              href=""
+              class="choose-block-link"
+              id="bottom-block"
+              onfocus="handleLinkFocus(this)"
+              >5 block</a
+            >
+            <a
+              href=""
+              class="choose-block-link"
+              id="page-footer-block"
+              onfocus="handleLinkFocus(this)"
+              >6 block</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <h2>Maidan Nezalezhnosti</h2>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <h3 class="footer-text">Glory to Ukraine!</h3>
+    </footer>
+  </body>
+</html>
