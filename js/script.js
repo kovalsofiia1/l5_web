@@ -30,8 +30,7 @@ function countSquare(event) {
     
     const resultNode = document.querySelector(".result");
     resultNode.textContent = square;
-    
-    // form.reset();
+   
 }
 
 // 3. Напишіть скрипт, який «перевертає» задане
@@ -75,7 +74,7 @@ function reverseNum(event) {
 
 window.onload = function () {
     if (document.cookie) {
-            formReverse.style.display = 'none';
+        formReverse.style.display = 'none';
 
         const userConfirmation = confirm("Cookies: " + document.cookie + ". Save cookies?");
 
@@ -188,29 +187,26 @@ function addToStorage() {
         storageValue += textNode.slice(0, textNode.length-6) + ';';
     }
     localStorage.setItem('listValues', storageValue);
-    console.log(storageValue);
-    console.log(liElements);
     const parentClass = localStorage.getItem('formInBlock');
     const parent = document.querySelector(parentClass);
     const content = parent.firstElementChild;
     content.style.display = 'none';
-    console.log(content);
 }
 
 
 function removeForm(blockClass) {
     const block = document.querySelector(blockClass);
-    console.log(block.innerHTML);
     block.innerHTML=block.innerHTML.slice(0, block.innerHTML.indexOf('<form class="create-list">'));
 }
 
 function handleLinkFocus(link) {
     if (localStorage.getItem('hasForm')) {
-        console.log(localStorage.getItem('hasForm'));
-        
+        const parentClass = localStorage.getItem('formInBlock');
+        const parent = document.querySelector(parentClass);
+        const content = parent.firstElementChild;
+        content.style.display = 'block';
         removeForm(localStorage.getItem('formInBlock'));
         localStorage.removeItem('hasForm');
-       
     }
     
     console.log(`Link is focused ${link.id.slice(0, link.id.length - 6)}.`);
